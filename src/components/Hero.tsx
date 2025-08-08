@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import profilePicture from "@/assets/profile-picture.jpg";
+import cvPdf from "@/assets/cv.pdf";
 
 const Hero = () => {
   return (
@@ -20,22 +21,22 @@ const Hero = () => {
           </div>
 
           <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            A driven third-year Information Technology undergraduate at the University of Moratuwa, 
-            Sri Lanka, specializing in full-stack development with expertise in Next.js, Django, 
-            MySQL, and modern web technologies. Passionate about building user-centric solutions 
+            A driven third-year Information Technology undergraduate at the University of Moratuwa,
+            Sri Lanka, specializing in full-stack development with expertise in Next.js, Django,
+            MySQL, and modern web technologies. Passionate about building user-centric solutions
             and continuous learning in software development.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
-            <Button 
-              className="btn-hero"
+            <Button
+              className="btn-hero "
               onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View Portfolio
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="btn-outline"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
@@ -45,14 +46,14 @@ const Hero = () => {
 
           {/* Social Links */}
           <div className="flex space-x-6">
-            <a 
+            <a
               href="mailto:vasanththajeevan@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors duration-300"
               aria-label="Email"
             >
               <Mail size={24} />
             </a>
-            <a 
+            <a
               href="https://www.linkedin.com/in/thajeevan-vasanthakumar-9b3a0a285"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,7 +62,7 @@ const Hero = () => {
             >
               <Linkedin size={24} />
             </a>
-            <a 
+            <a
               href="https://github.com/ThajeevanSE"
               target="_blank"
               rel="noopener noreferrer"
@@ -77,8 +78,8 @@ const Hero = () => {
         <div className="flex flex-col items-center animate-slide-up space-y-6">
           <div className="relative">
             <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl glow-primary">
-              <img 
-                src={profilePicture} 
+              <img
+                src={profilePicture}
                 alt="Vasanthakumar Thajeevan"
                 className="w-full h-full object-cover"
               />
@@ -87,16 +88,16 @@ const Hero = () => {
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full opacity-20 animate-float"></div>
             <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-full opacity-30 animate-float" style={{ animationDelay: '1s' }}></div>
           </div>
-          
+
           {/* Download CV Button */}
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="lg"
             className="flex items-center gap-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             onClick={() => {
               // Create a temporary link to download CV
               const link = document.createElement('a');
-              link.href = '/cv.pdf'; // You'll need to add your CV file to the public folder
+              link.href = cvPdf;
               link.download = 'Vasanthakumar_Thajeevan_CV.pdf';
               link.click();
             }}
