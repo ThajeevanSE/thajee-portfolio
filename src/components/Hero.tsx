@@ -95,9 +95,8 @@ const Hero = () => {
             size="lg"
             className="flex items-center gap-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             onClick={() => {
-              // Create a temporary link to download CV
               const link = document.createElement('a');
-              link.href = cvPdf;
+              link.href = process.env.PUBLIC_URL + '/cv.pdf';
               link.download = 'Vasanthakumar_Thajeevan_CV.pdf';
               link.click();
             }}
@@ -105,6 +104,7 @@ const Hero = () => {
             <Download size={20} />
             Download CV
           </Button>
+
         </div>
       </div>
 
