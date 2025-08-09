@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import profilePicture from "@/assets/profile-picture.jpg";
-import cvPdf from "@/assets/cv.pdf";
+
 
 const Hero = () => {
   return (
@@ -93,7 +93,7 @@ const Hero = () => {
           <Button
             variant="outline"
             size="lg"
-            className="flex items-center gap-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            className="flex items-center gap-2 hover:bg-primary text-blue-600: hover:text-primary-foreground transition-all duration-300"
             onClick={() => {
               const link = document.createElement('a');
               link.href = process.env.PUBLIC_URL + '/cv.pdf';
