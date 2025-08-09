@@ -96,7 +96,7 @@ const Hero = () => {
             className="flex items-center gap-2 hover:bg-primary text-blue-600: hover:text-primary-foreground transition-all duration-300"
             onClick={() => {
               const link = document.createElement('a');
-              link.href = process.env.PUBLIC_URL + '/cv.pdf';
+              link.href = `${process.env.PUBLIC_URL}/cv.pdf`;
               link.download = 'Vasanthakumar_Thajeevan_CV.pdf';
               link.click();
             }}
