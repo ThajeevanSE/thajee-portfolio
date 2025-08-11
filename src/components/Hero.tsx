@@ -117,14 +117,16 @@ const Hero = () => {
 
           {/* Download CV Button */}
           <Button
-            variant="outline"
-            size="lg"
-            className="flex items-center gap-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-            onClick={handleDownloadCV}
-          >
-            <Download size={20} />
-            Download CV
-          </Button>
+  variant="outline"
+  size="lg"
+  onClick={handleDownloadCV}
+  className="flex items-center gap-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+>
+  <Download size={20} />
+  Download CV
+</Button>
+
+
         </div>
       </div>
 
